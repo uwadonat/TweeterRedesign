@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+gem 'carrierwave'
 ruby '2.7.0'
 gem 'rubocop', '>= 1.0', '< 2.0'
 # Use postgresql as the database for Active Record

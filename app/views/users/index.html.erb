@@ -1,0 +1,8 @@
+<h1> top new tech </h1>
+<% @users.each do |tech|%>
+ 
+    <%= tech.email %>
+    <%= image_tag tech.profile_photo_url, width: '100%' if tech.profile_photo.present? %><br>
+
+    <% end %>
+<%= link_to 'sign_out', destroy_user_session_path, method: :delete %>
