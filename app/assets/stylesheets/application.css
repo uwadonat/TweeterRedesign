@@ -17,3 +17,17 @@
  table, td, th { vertical-align: middle; border: none; }
  th { border-bottom: 1px solid #DDD; }
  body { margin: 10px; }
+
+ .top-image {
+   border-radius: 40%;
+ }
+
+ .profile-image {
+   margin: 0px;
+ }
+
+ .followee-image {
+   margin-top :10px;
+   margin-right: 25px;
+   border-radius: 40%;
+ }

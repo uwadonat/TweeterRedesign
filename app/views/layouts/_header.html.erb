@@ -2,10 +2,17 @@
       <div class="col-lg-3 col-2 bg-primary">
          <div class="row">
            <div class="col-lg-6">
-              image
+          
+ 
+            
+            <%= image_tag current_user.profile_photo_url, width: '80px', class:' top-image' %><br>
+        
+            
            </div>
            <div class="col-lg-6">
-              name
+             
+              <%= current_user.fullname %>
+              
            </div>
          </div>
          <div class="row">
@@ -21,28 +28,24 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           <div class="container">
             <a class="navbar-brand" href="/">NewTech</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/technologies">Technology</a>
-                </li>
-              </ul>
-            </div>
+            
           </div>
         </nav>
       </div>
-      <div class="col-lg-3  d-none d-md-block   bg-warning">
-       search button
+      <div class="row col-lg-3  d-none d-md-block   bg-warning">
+        
+        <form  action="/">
+          <input type="text" placeholder="Search.." name="search">
+          
+        </form>
+      
       </div>
      
   </div>
 
   <div class="main d-flex row">
      <div class="col-lg-3  col-2 bg-dark">
-      <nav class="navbar  navbar-dark bg-primary">
+      <nav class="navbar  navbar-dark ">
         <div class="container">
          
           
@@ -51,7 +54,7 @@
                 <a class="nav-link" href="/technologies">Home</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/technologies">Profile</a>
+                <a class="nav-link" href="/users">Profile</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="/technologies">Discover</a>
@@ -69,8 +72,30 @@
         <div class="col-lg-8 bg-success">
           <%= yield %>
         </div>
-        <div class="col-lg-4 bg-primary">
-         who to follow
+        <div class="col-lg-4 bg-dark text-white">
+        <h2 class="text-center">who to follow</h2> 
+         
+         <% User.all.each do |user| %>
+            <div class="container row">
+              <div class="col-2">
+                <%= image_tag user.profile_photo_url, width: '32px', class:'followee-image' %><br>
+              </div>
+              <div class="row col-8">
+                <div class="col-12">
+                  <%= user.fullname %> 
+                </div>
+                <div class="col-12">
+                  <%= user.email %> 
+                </div>
+              </div>
+              <div class="col-2">
+                <%= link_to 'follow', users_path %>
+              </div>
+           
+          </div>
+          <br>
+            <% end %>
+          </ul>
         </div>
        </div>
        

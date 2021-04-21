@@ -1,8 +1,33 @@
-<h1> top new tech </h1>
-<% @users.each do |tech|%>
- 
-    <%= tech.email %>
-    <%= image_tag tech.profile_photo_url, width: '100%' if tech.profile_photo.present? %><br>
 
-    <% end %>
+    <%= image_tag current_user.profile_photo_url, width: '100%', class:' profile-image' %>
+   <div class="card" style="width:auto; margin: -10px;">
+   
+    <div class="card-body">
+      <h4 class="card-title"><%= @user.fullname %></h4>
+      <p class="card-text"> <%= @user.email %></p>
+     
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+  <br>
+   
+        <h1> top new tech </h1>
+        <ul>
+            <% @users.all.each do |t| %>
+      
+            <div class="card mb-2" style="width:auto; margin-left:-55px; margin-right:-10px">
+              
+              <div class="card-body">
+                <h4 class="card-title"><%= t.fullname %></h4>
+       
+                <a href="#" class="btn btn-primary ">follow</a>
+              </div>
+            </div>
+           
+         
+                 
+            <% end %>
+            
+        </ul>
+
 <%= link_to 'sign_out', destroy_user_session_path, method: :delete %>
