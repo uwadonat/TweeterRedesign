@@ -1,26 +1,27 @@
 
     <%= image_tag current_user.profile_photo_url, width: '100%', class:' profile-image' %>
-   <div class="card" style="width:auto; margin: -10px;">
+   <div class="card" style="width:auto; margin: 0px;">
    
     <div class="card-body">
       <h4 class="card-title"><%= @user.fullname %></h4>
       <p class="card-text"> <%= @user.email %></p>
      
-      <a href="#" class="btn btn-primary">See Profile</a>
+      <%= @foll %>
     </div>
   </div>
   <br>
    
         <h1> top new tech </h1>
         <ul>
-            <% @users.all.each do |t| %>
+            <% @newtech.all.each do |t| %>
       
-            <div class="card mb-2" style="width:auto; margin-left:-55px; margin-right:-10px">
+            <div class="card mb-2" style="width:auto; margin-left:-55px; margin-right:0px">
               
               <div class="card-body">
-                <h4 class="card-title"><%= t.fullname %></h4>
-       
-                <a href="#" class="btn btn-primary ">follow</a>
+                <h4 class="card-title"><%= t.user.fullname %></h4>
+                <h4 class="card-title"><%= t.tech_desc %></h4>
+
+       <%= link_to 'view profile', user_path(t) %>
               </div>
             </div>
            

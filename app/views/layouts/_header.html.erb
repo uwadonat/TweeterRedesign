@@ -17,24 +17,24 @@
          </div>
          <div class="row">
           <div class="col-lg-6">
-            fer
+            <h5>Followers:<%= followers %></h5>
          </div>
          <div class="col-lg-6">
-            fed
+          <h5>Followed:<%=  followed %></h5>
          </div>
          </div>
       </div>
       <div class="col-lg-6  col-10 bg-secondary">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <div class="container">
-            <a class="navbar-brand" href="/">NewTech</a>
+     
+            <a class="navbar-brand logo" href="/">NewTech</a>
             
-          </div>
+         
         </nav>
       </div>
-      <div class="row col-lg-3  d-none d-md-block   bg-warning">
+      <div class=" col-lg-3  d-none d-md-block   bg-warning">
         
-        <form  action="/">
+        <form  action="/" class="search">
           <input type="text" placeholder="Search.." name="search">
           
         </form>
@@ -89,7 +89,7 @@
                 </div>
               </div>
               <div class="col-2">
-                <%= link_to 'follow', users_path %>
+                <%= link_to 'follow', followings_path(user), method: :post %>
               </div>
            
           </div>

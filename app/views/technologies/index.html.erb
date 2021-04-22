@@ -1,18 +1,17 @@
 <%= form_with(model: @technology) do |form| %>
  
-  <%= form.label :New_technology %>
+  <h2 class="text-dark"><%= form.label :'Share your New technology' %></h2>
   <%= form.text_field :tech_desc, id: :tech_description, class: 'form-control', placeholder: 'Post your technology here' %>
-
+<br>
   <%= form.submit 'Post', class: 'btn btn-primary' %>
   <% end %>
 
   <article class="timeline">
   <h3>
       Recents tweets
-
   </h3>
 
-  <ul>
+  <ul>git add
       <% @newtech.all.each do |t| %>
 
       <div class="card mb-2" style="width:400px">
@@ -20,12 +19,11 @@
         <div class="card-body">
           <h4 class="card-title"><%= t.user.fullname %></h4>
           <p class="card-text"><%= t.tech_desc%></p>
-          <a href="#" class="btn btn-primary ">follow</a>
+       
+          <a href="/user" class="btn btn-primary ">view profile</a>
         </div>
       </div>
      
-   
-           
       <% end %>
       
   </ul>

@@ -23,11 +23,23 @@
  }
 
  .profile-image {
-   margin: 0px;
+   height: 200px;
  }
 
  .followee-image {
    margin-top :10px;
    margin-right: 25px;
    border-radius: 40%;
+ }
+
+ .search {
+   margin-top: 20px;
+   margin-left: 20px;
+ }
+
+ .logo {
+   font-size : 50px;
+   font-weight: bold;
+   
+   font-family: Georgia, 'Times New Roman', Times, serif;
  }
