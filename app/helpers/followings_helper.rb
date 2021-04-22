@@ -7,7 +7,4 @@ module FollowingsHelper
         current_user.followings.where(followed_id: current_user.id).distinct.count
     end
 
-    def followed?(x)
-       @@followedd.where(user_id: @user.id)
-    end
 end
