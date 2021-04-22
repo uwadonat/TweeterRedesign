@@ -7,20 +7,20 @@
   <% end %>
 
   <article class="timeline">
-  <h3>
+  <h3 class= "followe_title">
       Recents tweets
   </h3>
 
-  <ul>git add
+  <ul>
       <% @newtech.all.each do |t| %>
 
       <div class="card mb-2" style="width:400px">
         
         <div class="card-body">
-          <h4 class="card-title"><%= t.user.fullname %></h4>
-          <p class="card-text"><%= t.tech_desc%></p>
+          <h4 class="card-title followe_name"><%= t.user.fullname %></h4>
+          <p class="card-text followe_email"><%= t.tech_desc%></p>
        
-          <a href="/user" class="btn btn-primary ">view profile</a>
+          <%= link_to 'view profile', user_path(t) %>
         </div>
       </div>
      

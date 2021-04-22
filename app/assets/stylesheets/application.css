@@ -43,3 +43,43 @@
    
    font-family: Georgia, 'Times New Roman', Times, serif;
  }
+
+ .color-bg {
+   background-color: lightcyan;
+   
+ }
+
+ .navb {
+   background-color: rgb(43, 52, 78);
+   
+ }
+
+ .followe_name {
+   color:rgb(15, 43, 129);
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: 600;
+   opacity: 0.7;
+ }
+
+ .followe_email {
+  color:rgb(20, 21, 24);
+  
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+
+.followe_title {
+  color:rgb(15, 43, 129);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  opacity: 0.3;
+}
+
+.current_profile {
+  opacity: 0.5;
+}
+
+.lik:visited {
+  background-color:rgb(42, 201, 55);
+}

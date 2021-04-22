@@ -1,5 +1,5 @@
 <div class="head d-flex row">
-      <div class="col-lg-3 col-2 bg-primary">
+      <div class="col-lg-3 col-2 bg-dark text-white">
          <div class="row">
            <div class="col-lg-6">
           
@@ -11,20 +11,22 @@
            </div>
            <div class="col-lg-6">
              
-              <%= current_user.fullname %>
+             <h3 class="current_profile"><%= current_user.fullname %></h3> 
               
            </div>
          </div>
          <div class="row">
           <div class="col-lg-6">
-            <h5>Followers:<%= followers %></h5>
+            <h3 class="text-center"><%=  followers %></h3>
+          <p class="text-center current_profile">Followers</p>
          </div>
          <div class="col-lg-6">
-          <h5>Followed:<%=  followed %></h5>
+          <h3 class="text-center"><%=  followed %></h3>
+          <p class="text-center current_profile">Followeds </p>
          </div>
          </div>
       </div>
-      <div class="col-lg-6  col-10 bg-secondary">
+      <div class="col-lg-6  col-10 bg-primary">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
      
             <a class="navbar-brand logo" href="/">NewTech</a>
@@ -32,7 +34,7 @@
          
         </nav>
       </div>
-      <div class=" col-lg-3  d-none d-md-block   bg-warning">
+      <div class=" col-lg-3  d-none d-md-block   bg-primary">
         
         <form  action="/" class="search">
           <input type="text" placeholder="Search.." name="search">
@@ -44,22 +46,22 @@
   </div>
 
   <div class="main d-flex row">
-     <div class="col-lg-3  col-2 bg-dark">
+     <div class="col-lg-3  col-2 navb">
       <nav class="navbar  navbar-dark ">
         <div class="container">
          
           
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="/technologies">Home</a>
+              <li class="nav-item lik">
+                <a class="nav-link " href="/technologies">Home</a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item lik">
                 <a class="nav-link" href="/users">Profile</a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item lik">
                 <a class="nav-link" href="/technologies">Discover</a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item  lik">
                 <a class="nav-link" href="/technologies">Statistics</a>
               </li>
             </ul>
@@ -67,24 +69,24 @@
         </div>
       </nav>
      </div>
-     <div class="col-lg-9 col-10 bg-danger">
+     <div class="col-lg-9 col-10 bg-danger color-bg">
        <div class="main1 row">
-        <div class="col-lg-8 bg-success">
+        <div class="col-lg-8 color-bg">
           <%= yield %>
         </div>
-        <div class="col-lg-4 bg-dark text-white">
-        <h2 class="text-center">who to follow</h2> 
+        <div class="col-lg-4  color-bg">
+        <h2 class="text-center followe_title">who to follow</h2> 
          
-         <% User.all.each do |user| %>
-            <div class="container row">
+         <% User.all.each  do |user| %>
+            <div class="container row ">
               <div class="col-2">
                 <%= image_tag user.profile_photo_url, width: '32px', class:'followee-image' %><br>
               </div>
               <div class="row col-8">
-                <div class="col-12">
+                <div class="col-12 followe_name">
                   <%= user.fullname %> 
                 </div>
-                <div class="col-12">
+                <div class="col-12 followe_email">
                   <%= user.email %> 
                 </div>
               </div>

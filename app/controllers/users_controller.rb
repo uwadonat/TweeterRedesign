@@ -2,6 +2,7 @@ class UsersController < ApplicationController
     def show
       @user = User.find(params[:id])
       @newtech = Technology.order('created_at DESC')
+      
     end
     def index
         @users = User.all

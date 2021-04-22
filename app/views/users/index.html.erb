@@ -4,22 +4,22 @@
    
     <div class="card-body">
       <h4 class="card-title"><%= @user.fullname %></h4>
-      <p class="card-text"> <%= @user.email %></p>
+      <p class="card-text followe_email"> <%= @user.email %></p>
      
       <%= @foll %>
     </div>
   </div>
   <br>
    
-        <h1> top new tech </h1>
+        <h1 class= "followe_title"> top new tech </h1>
         <ul>
             <% @newtech.all.each do |t| %>
       
             <div class="card mb-2" style="width:auto; margin-left:-55px; margin-right:0px">
               
               <div class="card-body">
-                <h4 class="card-title"><%= t.user.fullname %></h4>
-                <h4 class="card-title"><%= t.tech_desc %></h4>
+                <h4 class="card-title followe_name"><%= t.user.fullname %></h4>
+                <h4 class="card-titl followe_email"><%= t.tech_desc %></h4>
 
        <%= link_to 'view profile', user_path(t) %>
               </div>
