@@ -5,8 +5,8 @@ class FollowingsController < ApplicationController
     followers
   end
     def create
-      @user = User.find(params[user)
-      @follower =current_user.followings.create(followed_id: user.id)
+      @user = User.find(params[user])
+      @follower =current_user.followings.create(followed_id: params[:format])
       @follower.save
         redirect_back(fallback_location: root_path)
      
