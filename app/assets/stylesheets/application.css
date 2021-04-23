@@ -54,6 +54,7 @@
    
  }
 
+
  .followe_name {
    color:rgb(15, 43, 129);
    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -82,4 +83,8 @@
 
 .lik:visited {
   background-color:rgb(42, 201, 55);
+}
+
+.login {
+  margin-left: 300px;
 }

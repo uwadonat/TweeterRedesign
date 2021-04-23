@@ -1,6 +1,6 @@
 
 <h2 class = "text-center">Sign up</h2><br/>
-<div class = "container d-flex text-center justify-content-center bg-primary " style="width: 400px; border-radius: 7px">
+<div class = "container d-flex text-center justify-content-center bg-danger " style="width: 400px; border-radius: 7px">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -38,12 +38,12 @@
   </div><br>
 
 
-  <div class="actions">
+  <div class="actions ">
     <%= f.submit "Sign up" %>
   </div>
   <br>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
 
 </div>
