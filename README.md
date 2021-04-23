@@ -3,12 +3,29 @@
 # TweeterRedesign
 
 In this Tweeter_redesign project I created a simple website called NewTech which is similar to Tweeter. User must first login before posting his new technology. He can also follows other users and check their profiles. the project is still in development and review cycle.
+![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/homepage.png)
+- Homepage
+![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/current_user_profile.png)
+- current_user profile
+![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/user_profile.png)
+- user profile page
+
 ## Built With
 
 - Ruby on Rails
 - Active Record
 - Bootstrap 4
 - Ruby
+- Rspec gem
+
+
+## Rspec testing
+ > To test of models, write the following in your terminal:
+
+ ```
+$ rspec 
+```
+
 
 ## Getting Started
 
@@ -49,10 +66,10 @@ $ rails server
 > In order to use the website signup and login 
 
 
-> Post your New technology an event 
+> Post your New technology 
 
 
-> Visit profile of other user and follow some if you want by clicking on follow button
+> Visit profile of other user and follow some if you want by clicking on view profile or follow button
 
 ## AUTHOR
 
