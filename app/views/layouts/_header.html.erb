@@ -17,11 +17,11 @@
          </div>
          <div class="row">
           <div class="col-lg-6">
-            <h3 class="text-center"><%=  followers %></h3>
+            <h3 class="text-center"><%=  followers(current_user) %></h3>
           <p class="text-center current_profile">Followers</p>
          </div>
          <div class="col-lg-6">
-          <h3 class="text-center"><%=  followed %></h3>
+          <h3 class="text-center"><%=  followed(current_user) %></h3>
           <p class="text-center current_profile">Followeds </p>
          </div>
          </div>
@@ -34,7 +34,7 @@
          
         </nav>
       </div>
-      <div class=" col-lg-3  d-none d-md-block   bg-primary">
+      <div class=" col-lg-3  d-none d-lg-block   bg-primary">
         
         <form  action="/" class="search">
           <input type="text" placeholder="Search.." name="search">
@@ -74,11 +74,36 @@
         <div class="col-lg-8 color-bg">
           <%= yield %>
         </div>
-        <div class="col-lg-4  color-bg">
+        <div class=" col-lg-4 color-bg">
+          <div class="row">
+        <div class="row col-12 color-bg">
+      
+            <div class="col-12 bg-dark">
+              <%= image_tag @user.profile_photo_url, width: '100%', class:' profile-image' %>
+            </div>
+            <div class="col-12 ">
+              <div class="row bg-secondary">
+              <div class="col-4" >
+tweets <%= tweets(@user)%>
+              </div>
+              <div class="col-4">
+followed <%= followed(@user) %>
+              </div>
+              <div class="col-4">
+followers  <%= followers(@user) %>
+              </div>
+              </div>
+            </div>
+
+         
+        </div>
+        <div class="col-12 color-bg">
         <h2 class="text-center followe_title">who to follow</h2> 
          
          <% User.all.each  do |user| %>
+    
             <div class="container row ">
+              <% if current_user.id != user.id && !current_user.followings.where(followed_id: user.id).any? %>
               <div class="col-2">
                 <%= image_tag user.profile_photo_url, width: '32px', class:'followee-image' %><br>
               </div>
@@ -90,15 +115,19 @@
                   <%= user.email %> 
                 </div>
               </div>
+         
               <div class="col-2">
-                <%= link_to 'follow', followings_path, method: :get %>
+                <%= link_to 'follow', followings_path(user), method: :post %>
               </div>
-           
+              <% end %>
           </div>
           <br>
+           
             <% end %>
           </ul>
         </div>
+        </div>
+      </div>
        </div>
        
      </div>

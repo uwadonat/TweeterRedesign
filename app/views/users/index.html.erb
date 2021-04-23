@@ -6,7 +6,7 @@
       <h4 class="card-title"><%= @user.fullname %></h4>
       <p class="card-text followe_email"> <%= @user.email %></p>
      
-      <%= @foll %>
+      
     </div>
   </div>
   <br>
@@ -20,8 +20,8 @@
               <div class="card-body">
                 <h4 class="card-title followe_name"><%= t.user.fullname %></h4>
                 <h4 class="card-titl followe_email"><%= t.tech_desc %></h4>
-
-       <%= link_to 'view profile', user_path(t) %>
+     
+       <%= link_to 'view profile', user_path(t.user.id ) %>
               </div>
             </div>
            

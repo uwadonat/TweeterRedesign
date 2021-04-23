@@ -20,7 +20,7 @@
           <h4 class="card-title followe_name"><%= t.user.fullname %></h4>
           <p class="card-text followe_email"><%= t.tech_desc%></p>
        
-          <%= link_to 'view profile', user_path(t) %>
+          <%= link_to 'view profile', user_path(t.user.id ) %>
         </div>
       </div>
      

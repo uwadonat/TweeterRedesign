@@ -4,9 +4,9 @@ class TechnologiesController < ApplicationController
 
     def index
         @users = User.all
-      
+       @user = current_user
         @technology = Technology.new
-        @newtech = Technology.order('created_at DESC') 
+        @newtech = Technology.all.order('created_at DESC') 
         # timeline_technologies
     end
 

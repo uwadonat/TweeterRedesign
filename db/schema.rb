@@ -13,10 +13,11 @@
 ActiveRecord::Schema.define(version: 2021_04_20_122500) do
 
   create_table "followings", force: :cascade do |t|
-    t.integer "followed_id"
+    t.integer "followed_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["followed_id"], name: "index_followings_on_followed_id"
     t.index ["user_id"], name: "index_followings_on_user_id"
   end
 
@@ -44,5 +45,6 @@ ActiveRecord::Schema.define(version: 2021_04_20_122500) do
   end
 
   add_foreign_key "followings", "users"
+  add_foreign_key "followings", "users", column: "followed_id"
   add_foreign_key "technologies", "users"
 end
