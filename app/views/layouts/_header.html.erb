@@ -1,5 +1,5 @@
 <div class="head d-flex row">
-      <div class="col-lg-3 col-2 bg-dark text-white">
+      <div class="col-lg-3 col-2 logo1  text-white">
          <div class="row">
            <div class="col-lg-6">
           
@@ -11,30 +11,30 @@
            </div>
            <div class="col-lg-6">
              
-             <h3 class="current_profile"><%= current_user.fullname %></h3> 
+             <h3 class="current_profile link_color"><%= current_user.fullname %></h3> 
               
            </div>
          </div>
          <div class="row">
           <div class="col-lg-6">
             <h3 class="text-center"><%=  followers(current_user) %></h3>
-          <p class="text-center current_profile">Followers</p>
+          <p class="text-center current_profile link_color">Followers</p>
          </div>
          <div class="col-lg-6">
           <h3 class="text-center"><%=  followed(current_user) %></h3>
-          <p class="text-center current_profile">Followeds </p>
+          <p class="text-center current_profile link_color">Followeds </p>
          </div>
          </div>
       </div>
-      <div class="col-lg-6  col-10 bg-primary">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="col-lg-6  col-10 main_logo">
+        <nav class="navbar navbar-expand-lg navbar-dark main_logo">
      
-            <a class="navbar-brand logo" href="/">NewTech</a>
+            <a class="navbar-brand logo " href="/">NewTech</a>
             
          
         </nav>
       </div>
-      <div class=" col-lg-3  d-none d-lg-block   bg-primary">
+      <div class=" col-lg-3  d-none d-lg-block   main_logo">
         
         <form  action="/" class="search">
           <input type="text" placeholder="Search.." name="search">
@@ -47,22 +47,22 @@
 
   <div class="main d-flex row">
      <div class="col-lg-3  col-2 navb">
-      <nav class="navbar  navbar-dark ">
+      <nav class="navbar   ">
         <div class="container">
          
           
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto ">
               <li class="nav-item lik">
-                <a class="nav-link " href="/technologies">Home</a>
+                <a class="nav-link link_color" href="/technologies">Home</a>
               </li>
               <li class="nav-item lik">
-                <a class="nav-link" href="/users">Profile</a>
+                <a class="nav-link link_color" href="/users">Profile</a>
               </li>
               <li class="nav-item lik">
-                <a class="nav-link" href="/technologies">Discover</a>
+                <a class="nav-link link_color" href="/technologies">Discover</a>
               </li>
               <li class="nav-item  lik">
-                <a class="nav-link" href="/technologies">Statistics</a>
+                <a class="nav-link link_color" href="/technologies">Statistics</a>
               </li>
             </ul>
           
