@@ -59,9 +59,23 @@
 
 
  .link_color {
-  color:rgb(105, 125, 148)
+   color:rgb(105, 125, 148)
+   width:200%;
  }
- .navb {
+
+.link_size {
+  font-size: 22px;
+  color:rgb(105, 125, 148)
+
+}
+
+.link_size:hover {
+  background-color:rgb(76, 154, 213);
+  width: 100%;
+  margin:0;
+}
+
+.navb {
    background-color: rgb(33,50,70);
    
  }
