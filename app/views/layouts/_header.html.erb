@@ -1,7 +1,7 @@
 <div class="head d-flex row">
       <div class="col-lg-3 col-2 logo1  text-white">
          <div class="row">
-           <div class="col-lg-6">
+           <div class="col-lg-3">
           
  
             
@@ -9,9 +9,9 @@
         
             
            </div>
-           <div class="col-lg-6">
+           <div class="col-lg-9">
              
-             <h3 class="current_profile link_color"><%= current_user.fullname %></h3> 
+             <h3 class="text-center current_profile link_color"><%= current_user.fullname %></h3> 
               
            </div>
          </div>
@@ -37,8 +37,9 @@
       <div class=" col-lg-3  d-none d-lg-block   main_logo">
         
         <form  action="/" class="search">
-          <input type="text" placeholder="Search.." name="search">
-          
+          <input type="text" placeholder="Search.." name="search"><br><br><br>
+          <%= link_to 'sign_out', destroy_user_session_path, class: 'btn btn-primary sign_out', method: :delete %>
+   
         </form>
       
       </div>
@@ -75,16 +76,16 @@
             <div class="col-12 bg-dark">
               <%= image_tag @user.profile_photo_url, width: '100%', class:' profile-image' %>
             </div>
-            <div class="col-12 ">
-              <div class="row bg-secondary">
-              <div class="col-4" >
-tweets <%= tweets(@user)%>
+            <div class="col-12 color-bg">
+              <div class="row color-bg">
+              <div class="col-4 text-center current_profile link_color" >
+                <%= tweets(@user)%> tweets 
               </div>
-              <div class="col-4">
-followed <%= followed(@user) %>
+              <div class="col-4 text-center current_profile link_color">
+                 <%= followed(@user) %> followed 
               </div>
-              <div class="col-4">
-followers  <%= followers(@user) %>
+              <div class="col-4 text-center current_profile link_color">
+                <%= followers(@user)%> followers 
               </div>
               </div>
             </div>
