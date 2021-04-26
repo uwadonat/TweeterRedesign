@@ -18,10 +18,10 @@
             <div class="card mb-2" style="width:auto; margin-left:-55px; margin-right:0px">
               
               <div class="card-body">
-                <h4 class="card-title followe_name"><%= t.user.fullname %></h4>
+                <h4 class="card-title followe_name"><%=link_to  t.user.fullname, user_path(t.user.id ) %></h4>
                 <h4 class="card-titl followe_email"><%= t.tech_desc %></h4>
      
-       <%= link_to 'view profile', user_path(t.user.id ) %>
+      
               </div>
             </div>
            
