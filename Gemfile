@@ -4,7 +4,7 @@ gem 'carrierwave'
 gem 'rspec-rails'
 
 gem 'cloudinary'
-ruby '2.7.0'
+ruby '3.0.0'
 gem 'rubocop', '>= 1.0', '< 2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
