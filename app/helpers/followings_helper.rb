@@ -12,7 +12,6 @@ module FollowingsHelper
   end
 
   def tweets(user)
-    
     user.technologies.count
   end
 end

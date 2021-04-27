@@ -1,3 +1,3 @@
 class Following < ApplicationRecord
-    validates :followed_id, presence: true
+  validates :followed_id, presence: true
 end
