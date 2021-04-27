@@ -27,6 +27,14 @@ th {
   border: none;
 }
 
+.foll {
+  margin-left: 20px;
+}
+
+.foll1 {
+  margin-left: 10px;
+}
+
 body { margin: 10px; }
 
 .top-image {

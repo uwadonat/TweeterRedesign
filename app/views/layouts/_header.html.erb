@@ -1,7 +1,7 @@
 <div class="container_fluid head d-flex row">
       <div class="col-lg-3 col-2 logo1  text-white">
          <div class="row">
-           <div class="col-lg-3">
+           <div class="text-left col-lg-3">
           
  
             
@@ -11,18 +11,18 @@
            </div>
            <div class="col-lg-9">
              
-             <h3 class="text-center current_profile link_color"><%= current_user.fullname %></h3> 
+             <h3 class="text-left foll1 current_profile link_color"><%= current_user.fullname %></h3> 
               
            </div>
          </div>
          <div class="row">
           <div class="col-lg-6">
             <h3 class="text-center"><%=  followers(current_user) %></h3>
-          <p class="text-center current_profile link_color">Followers</p>
+          <p class="text-left  foll current_profile link_color">Following</p>
          </div>
          <div class="col-lg-6">
           <h3 class="text-center"><%=  followed(current_user) %></h3>
-          <p class="text-center current_profile link_color">Following </p>
+          <p class="text-left foll current_profile link_color">Followers </p>
          </div>
          </div>
       </div>
@@ -82,10 +82,10 @@
                 <%= tweets(@user)%> tweets 
               </div>
               <div class="col-4 text-center current_profile link_color">
-                 <%= followed(@user) %> following
+                 <%= followed(@user) %> followers
               </div>
               <div class="col-4 text-center current_profile link_color">
-                <%= followers(@user)%> followers 
+                <%= followers(@user)%> following 
               </div>
               </div>
             </div>
@@ -111,7 +111,7 @@
                 </div>
               </div>
          
-              <div class="col-2">
+              <div class="foll col-2">
                 <%= link_to 'follow', followings_path(user), method: :post %>
               </div>
               <% end %>
