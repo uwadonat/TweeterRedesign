@@ -25,7 +25,9 @@ In this Tweeter_redesign project I created a simple website called NewTech which
  ```
 $ rspec 
 ```
+## live version
 
+ > [NewTech](https://rocky-hollows-54446.herokuapp.com/users/sign_in)
 
 ## Getting Started
 
