@@ -5,10 +5,10 @@
 In this Tweeter_redesign project I created a simple website called NewTech which is similar to Tweeter. User must first login before posting his new technology. He can also follows other users and check their profiles. the project is still in development and review cycle.
 ![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/homepage.png)
 - Homepage
-![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/current_user_profile.png)
+![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/profile.png)
 - current_user profile
-![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/user_profile.png)
-- user profile page
+![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/about.png)
+- About page
 
 ## Built With
 
