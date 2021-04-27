@@ -13,93 +13,95 @@
  *= require_tree .
  *= require_self
  */
- footer { margin-top: 10px; }
- table, td, th { vertical-align: middle; border: none; }
- th { border-bottom: 1px solid #DDD; }
- body { margin: 10px; }
+footer { margin-top: 10px; }
 
- .top-image {
-   border-radius: 40%;
- }
+table,
+td {
+  vertical-align: middle;
+  border: none;
+}
 
- .profile-image {
-   height: 200px;
- }
+th {
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  border: none;
+}
 
- .followee-image {
-   margin-top :10px;
-   margin-right: 25px;
-   border-radius: 40%;
- }
+body { margin: 10px; }
 
- .search {
-   margin-top: 20px;
-   margin-left: 20px;
- }
+.top-image {
+  border-radius: 40%;
+}
 
+.profile-image {
+  height: 200px;
+}
 
- .logo {
-   font-size : 50px;
-   font-weight: bold;
-   
-   font-family: Georgia, 'Times New Roman', Times, serif;
- }
+.followee-image {
+  margin-top: 10px;
+  margin-right: 25px;
+  border-radius: 40%;
+}
 
- .logo1 {
-   background-color:rgb(27, 42, 61)
- }
+.search {
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
- .main_logo {
-   background-color:rgb(80, 164, 225)
- }
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
- .color-bg {
-   background-color:rgb(245, 246, 248)
-   
- }
+.logo1 {
+  background-color: rgb(27, 42, 61);
+}
 
+.main_logo {
+  background-color: rgb(80, 164, 225);
+}
 
- .link_color {
-   color:rgb(105, 125, 148)
-   width:200%;
- }
+.color-bg {
+  background-color: rgb(245, 246, 248);
+}
+
+.link_color {
+  color: rgb(105, 125, 148);
+  width: 200%;
+}
 
 .link_size {
   font-size: 22px;
-  color:rgb(105, 125, 148)
-
+  color: rgb(105, 125, 148);
 }
 
 .link_size:hover {
-  background-color:rgb(76, 154, 213);
+  background-color: rgb(76, 154, 213);
   width: 100%;
-  margin:0;
+  margin: 0;
 }
 
 .navb {
-   background-color: rgb(33,50,70);
-   
- }
+  background-color: rgb(33, 50, 70);
+}
 
+.followe_name {
+  color: rgb(15, 43, 129);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  opacity: 0.7;
+}
 
- .followe_name {
-   color:rgb(15, 43, 129);
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   font-weight: 600;
-   opacity: 0.7;
- }
-
- .followe_email {
-  color:rgb(20, 21, 24);
-  
+.followe_email {
+  color: rgb(20, 21, 24);
   font-weight: 400;
   opacity: 0.5;
 }
 
-
 .followe_title {
-  color:rgb(15, 43, 129);
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(15, 43, 129);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   opacity: 0.3;
 }
@@ -109,7 +111,7 @@
 }
 
 .lik:visited {
-  background-color:rgb(42, 201, 55);
+  background-color: rgb(42, 201, 55);
 }
 
 .login {
