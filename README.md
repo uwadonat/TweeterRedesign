@@ -6,7 +6,7 @@ In this Tweeter_redesign project I created a simple website called NewTech which
 ![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/homepage.png)
 - Homepage
 ![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/profile.png)
-- current_user profile
+- user profile
 ![screenshot](https://github.com/uwadonat/TweeterRedesign/blob/dev-branch/images/about.png)
 - About page
 
