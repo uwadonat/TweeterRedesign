@@ -17,7 +17,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'returns false if udername is not not provided' do
-      user = User.new(email: 'uwadonat@gmail.com', password: '12345566',password: '12345566',
+      user = User.new(email: 'uwadonat@gmail.com', password: '12345566',
                       profile_photo: 'donat.jpeg', cover_image: 'eric.jpeg').save
       expect(user).to eq(false)
     end

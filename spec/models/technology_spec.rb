@@ -9,11 +9,10 @@ RSpec.describe Technology, type: :model do
   end
 
   describe 'associations' do
-    it { should belong_to(:user).class_name('User')}
+    it { should belong_to(:user).class_name('User') }
   end
 
   describe 'validations' do
     it { should validate_presence_of(:tech_desc) }
   end
-
 end
