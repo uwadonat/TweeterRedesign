@@ -43,6 +43,12 @@ body { margin: 10px; }
 
 .profile-image {
   height: 200px;
+  margin-left: 20px;
+}
+
+.pro {
+  margin-left: 0px;
+
 }
 
 .followee-image {
@@ -132,4 +138,12 @@ body { margin: 10px; }
 
 .sign_out {
   margin-left: 150px;
+}
+
+.technology-liking {
+  margin-left: 60%;
+}
+
+.technology-liking2 {
+  margin-left: 70%;
 }

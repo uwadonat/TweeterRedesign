@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_20_122500) do
+ActiveRecord::Schema.define(version: 2021_04_28_102739) do
 
   create_table "followings", force: :cascade do |t|
     t.integer "followed_id", null: false
@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(version: 2021_04_20_122500) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["followed_id"], name: "index_followings_on_followed_id"
     t.index ["user_id"], name: "index_followings_on_user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "technology_id"
+    t.integer "user_id"
   end
 
   create_table "technologies", force: :cascade do |t|
@@ -46,5 +51,7 @@ ActiveRecord::Schema.define(version: 2021_04_20_122500) do
 
   add_foreign_key "followings", "users"
   add_foreign_key "followings", "users", column: "followed_id"
+  add_foreign_key "likes", "technologies"
+  add_foreign_key "likes", "users"
   add_foreign_key "technologies", "users"
 end
