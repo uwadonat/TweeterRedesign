@@ -78,7 +78,7 @@
               <%= image_tag @user.profile_photo_url, width: '100%', class:' profile-image' %> 
 
             </div>
-            <div class="col-2"><%= link_to 'follow', followings_path(@user), method: :post %></div>
+            <div class="col-2"><%= followingss(@user) %></div>
           </div>
             <div class="col-12 color-bg">
               <div class="row color-bg">
@@ -102,23 +102,23 @@
          <% User.all.each  do |user| %>
     
             <div class="container row ">
-              <% if current_user.id != user.id && !current_user.followings.where(followed_id: user.id).any? %>
+             
               <div class="col-2">
-                <%= image_tag user.profile_photo_url, width: '32px', class:'followee-image' %><br>
+                <%= followerss_image(user) %><br>
               </div>
               <div class="row col-8">
                 <div class="col-12 followe_name">
-                  <%= user.fullname %> 
+                  <%= followerss_name(user) %> 
                 </div>
                 <div class="col-12 followe_email">
-                  <%= user.email %> 
+                  <%= followerss_email(user) %> 
                 </div>
               </div>
          
               <div class="foll col-2">
-                <%= link_to 'follow', followings_path(user), method: :post %>
+                <%= followerss_link(user) %>
               </div>
-              <% end %>
+             
           </div>
           <br>
            

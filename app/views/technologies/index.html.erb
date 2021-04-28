@@ -1,7 +1,7 @@
 <%= form_with(model: @technology) do |form| %>
- 
-  <h2 class="text-dark"><%= form.label :'Share your New technology' %></h2>
-  <%= form.text_field :tech_desc, id: :tech_description, class: 'form-control', placeholder: 'Post your technology here' %>
+<h1 class="text-warning"><marquee behavior="scroll" direction="right">Share your New technology </marquee></h1>
+
+  <%= form.text_area :tech_desc, id: :tech_description, class: 'form-control', placeholder: 'Post your technology here', row: 3 %>
 <br>
   <%= form.submit 'Post', class: 'btn btn-primary' %>
   <% end %>
