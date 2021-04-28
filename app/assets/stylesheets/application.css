@@ -14,19 +14,6 @@
  *= require_self
  */
 
- .tit {
- 
- 
-  color: red;
-  animation-name: example;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes example {
-  from {color: red;}
-  to {color: yellow;}
-}
 footer { margin-top: 10px; }
 
 table,

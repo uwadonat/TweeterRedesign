@@ -9,47 +9,31 @@ module ApplicationHelper
   end
 
   def followingss(user)
-    display = current_user.id != user.id && !current_user.followings.where(followed_id: user.id).any?
+    display = current_user.id != user.id && current_user.followings.where(followed_id: user.id).none?
     if display
-        link_to('follow', followings_path(@user), method: :post)
+      link_to('follow', followings_path(@user), method: :post)
     else
-        link_to ('followed')
+      link_to('followed')
     end
-
   end
 
-
   def followerss_image(user)
-    dis = current_user.id != user.id && !current_user.followings.where(followed_id: user.id).any?
-    if dis
-        (image_tag user.profile_photo_url, width: '32px', class:'followee-image')
-    end
-
+    dis = current_user.id != user.id && current_user.followings.where(followed_id: user.id).none?
+    (image_tag user.profile_photo_url, width: '32px', class: 'followee-image') if dis
   end
 
   def followerss_name(user)
-    dis = current_user.id != user.id && !current_user.followings.where(followed_id: user.id).any?
-    if dis
-        (user.fullname)
-    end
-
+    dis = current_user.id != user.id && current_user.followings.where(followed_id: user.id).none?
+    user.fullname if dis
   end
 
   def followerss_email(user)
-    dis = current_user.id != user.id && !current_user.followings.where(followed_id: user.id).any?
-    if dis
-        (user.email)
-    end
-
+    dis = current_user.id != user.id && current_user.followings.where(followed_id: user.id).none?
+    user.email if dis
   end
 
   def followerss_link(user)
-    dis = current_user.id != user.id && !current_user.followings.where(followed_id: user.id).any?
-    if dis
-        link_to('follow', followings_path(user), method: :post)
-    end
-
+    dis = current_user.id != user.id && current_user.followings.where(followed_id: user.id).none?
+    link_to('follow', followings_path(user), method: :post) if dis
   end
-
-
 end
