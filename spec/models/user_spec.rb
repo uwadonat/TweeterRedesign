@@ -16,16 +16,20 @@ RSpec.describe User, type: :model do
       expect(User.find_by(email: 'jordy')).to eq(nil)
     end
 
-    it 'returns true if all attribute has valid values' do
-      user = User.new(email: 'uwadonat@gmail.com', fullname: 'UWAMAHORO', password: '12345566',
+    it 'returns false if udername is not not provided' do
+      user = User.new(email: 'uwadonat@gmail.com', password: '12345566',password: '12345566',
                       profile_photo: 'donat.jpeg', cover_image: 'eric.jpeg').save
-      expect(user).to eq(true)
+      expect(user).to eq(false)
     end
 
     it 'returns false if password values are less than 6 ' do
       user = User.new(email: 'uwadonat@gmail.com', fullname: 'UWAMAHORO', password: '166', profile_photo: 'donat.jpeg',
                       cover_image: 'eric.jpeg').save
       expect(user).to eq(false)
+    end
+
+    describe 'validations' do
+      it { should validate_presence_of(:fullname) }
     end
   end
 end

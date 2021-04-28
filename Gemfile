@@ -18,6 +18,10 @@ end
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
+
+group :test do
+  gem 'shoulda-matchers', '~> 4.0'
+end
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

@@ -12,5 +12,9 @@ RSpec.describe Following, type: :model do
       @invite = Following.create
       expect(@invite).to_not be_valid
     end
+
+    describe 'validations' do
+      it { should validate_presence_of(:followed_id) }
+    end
   end
 end
