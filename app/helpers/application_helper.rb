@@ -12,6 +12,8 @@ module ApplicationHelper
     display = current_user.id != user.id && current_user.followings.where(followed_id: user.id).none?
     if display
       link_to('follow', followings_path(@user), method: :post)
+    elsif current_user.id == user.id 
+      link_to(' ')
     else
       link_to('followed')
     end
@@ -36,4 +38,6 @@ module ApplicationHelper
     dis = current_user.id != user.id && current_user.followings.where(followed_id: user.id).none?
     link_to('follow', followings_path(user), method: :post) if dis
   end
+
+ 
 end

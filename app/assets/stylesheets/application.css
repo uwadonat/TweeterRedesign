@@ -14,6 +14,11 @@
  *= require_self
  */
 
+.back {
+  background-color:blueviolet;
+  width:100%;
+}
+
 footer { margin-top: 10px; }
 
 table,
@@ -28,12 +33,28 @@ th {
   border: none;
 }
 
+@keyframes example {
+  from {
+    color: red;
+    }
+  to {
+    color: yellow;
+    }
+  }
+
+.tit {
+  color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
 .foll {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .foll1 {
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 body { margin: 10px; }
@@ -44,7 +65,7 @@ body { margin: 10px; }
 
 .profile-image {
   height: 200px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .pro {
@@ -59,7 +80,7 @@ body { margin: 10px; }
 
 .search {
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 120px;
 }
 
 .logo {
@@ -137,13 +158,15 @@ body { margin: 10px; }
 }
 
 .sign_out {
-  margin-left: 150px;
+  margin-left: 130px;
 }
 
 .technology-liking {
-  margin-left: 60%;
+  margin-left: 70%;
 }
 
 .technology-liking2 {
   margin-left: 70%;
 }
+
+
