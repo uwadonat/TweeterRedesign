@@ -15,8 +15,8 @@
  */
 
 .back {
-  background-color:blueviolet;
-  width:100%;
+  background-color: blueviolet;
+  width: 100%;
 }
 
 footer { margin-top: 10px; }
@@ -31,22 +31,6 @@ th {
   border-bottom: 1px solid #ddd;
   vertical-align: middle;
   border: none;
-}
-
-@keyframes example {
-  from {
-    color: red;
-    }
-  to {
-    color: yellow;
-    }
-  }
-
-.tit {
-  color: red;
-  animation-name: example;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
 }
 
 .foll {
@@ -80,7 +64,7 @@ body { margin: 10px; }
 
 .search {
   margin-top: 20px;
-  margin-left: 120px;
+  margin-left: 80px;
 }
 
 .logo {
@@ -168,5 +152,3 @@ body { margin: 10px; }
 .technology-liking2 {
   margin-left: 70%;
 }
-
-

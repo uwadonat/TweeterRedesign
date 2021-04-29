@@ -12,7 +12,7 @@ module ApplicationHelper
     display = current_user.id != user.id && current_user.followings.where(followed_id: user.id).none?
     if display
       link_to('follow', followings_path(@user), method: :post)
-    elsif current_user.id == user.id 
+    elsif current_user.id == user.id
       link_to(' ')
     else
       link_to('followed')
@@ -39,5 +39,11 @@ module ApplicationHelper
     link_to('follow', followings_path(user), method: :post) if dis
   end
 
- 
+  def navbar
+    (render 'layouts/header').html_safe if user_signed_in?
+  end
+
+  def navbar2
+    (render 'layouts/footer').html_safe unless user_signed_in?
+  end
 end

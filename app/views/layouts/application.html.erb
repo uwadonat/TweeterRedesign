@@ -16,15 +16,14 @@
   <body>
     
 <div class="container-fluid">
-  <%if user_signed_in?%>
-  <%= render 'layouts/header' %>
- <% else %>
-  <%= yield %>
-  <% end %>
+
+  <%= navbar %>
+ 
   </div>
 
   <footer class="text-center">
     <div class="container">
+      <%= navbar2 %>
       NewTech <%= Time.now.year %>
     </div>
   </footer>

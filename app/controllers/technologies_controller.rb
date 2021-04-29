@@ -5,7 +5,7 @@ class TechnologiesController < ApplicationController
     @users = User.all
     @user = current_user
     @technology = Technology.new
-    @newtech = Technology.all.order('created_at DESC')
+    @newtech = Technology.all.includes(:user).order('created_at DESC')
   end
 
   def create

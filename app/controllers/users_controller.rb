@@ -1,14 +1,14 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @newtech = Technology.order('created_at DESC')
+    @newtech = Technology.includes(:user).order('created_at DESC')
   end
 
   def index
     @users = User.all.order('created_at DESC')
     @user = current_user
     @tech = Technology.all
-    @newtech = Technology.order('created_at DESC')
+    @newtech = @user.technologies.order('created_at DESC')
   end
 
   def new
