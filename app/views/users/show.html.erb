@@ -1,0 +1,35 @@
+<div class="main-content">
+  
+<%= image_tag @user.profile_photo_url, width: '100%', class:' profile-image' %>
+<div class="card" style="width:auto; margin: 0px;">
+
+ <div class="card-body">
+   <h4 class="card-title followe_name"><%= @user.fullname %></h4>
+   <p class="card-text followe_email"> <%= @user.email %></p>
+     
+ </div>
+</div>
+<br>
+
+<h1 class= "followe_title"> top new tech </h1>
+<ul>
+    <% @newtech.all.each do |t| %>
+
+    <div class="card mb-2" style="width:auto; margin-left:-55px; margin-right:0px">
+      
+      <div class="card-body">
+        <h4 class="card-title followe_name"><%=link_to t.user.fullname, user_path(t.user.id ) %></h4>
+        <h4 class="card-title followe_email"><%= t.tech_desc %></h4>
+        <div class='technology-liking'>
+          <span class='technology-date'> <%= t.created_at.strftime("%Y/%m/%d") %> </span>
+          <%= like_or_dislike_btn(t) %>
+        </div> 
+
+
+      </div>
+    </div>
+   
+    <% end %>
+    
+</ul>
+</div>

@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  devise_for :users
+ root 'technologies#index'
+
+ resources :users, only: [:index, :show]
+ resources :followings, only: [:index, :create , :destroy, :update]
+ resources :technologies, only: [:create, :index] do
+ resources :likes, only: [:create, :destroy]
+  end
+ get 'pages/info'
 end

@@ -13,3 +13,142 @@
  *= require_tree .
  *= require_self
  */
+
+.back {
+  background-color: blueviolet;
+  width: 100%;
+}
+
+footer { margin-top: 10px; }
+
+table,
+td {
+  vertical-align: middle;
+  border: none;
+}
+
+th {
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  border: none;
+}
+
+.foll {
+  margin-left: 30px;
+}
+
+.foll1 {
+  margin-left: 30px;
+}
+
+body { margin: 10px; }
+
+.top-image {
+  border-radius: 40%;
+}
+
+.profile-image {
+  height: 200px;
+  margin-left: 30px;
+}
+
+.pro {
+  margin-left: 0;
+}
+
+.followee-image {
+  margin-top: 10px;
+  margin-right: 25px;
+  border-radius: 40%;
+}
+
+.search {
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo1 {
+  background-color: rgb(27, 42, 61);
+}
+
+.main_logo {
+  background-color: rgb(80, 164, 225);
+}
+
+.color-bg {
+  background-color: rgb(245, 246, 248);
+}
+
+.link_color {
+  color: rgb(105, 125, 148);
+  width: 200%;
+}
+
+.link_size {
+  font-size: 22px;
+  color: rgb(105, 125, 148);
+}
+
+.link_size:hover {
+  background-color: rgb(76, 154, 213);
+  width: 100%;
+  margin: 0;
+}
+
+.navb {
+  background-color: rgb(33, 50, 70);
+}
+
+.followe_name {
+  color: rgb(15, 43, 129);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.followe_email {
+  color: rgb(20, 21, 24);
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.followe_title {
+  color: rgb(15, 43, 129);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  opacity: 0.3;
+}
+
+.current_profile {
+  opacity: 0.5;
+}
+
+.lik:visited {
+  background-color: rgb(42, 201, 55);
+}
+
+.login {
+  margin-left: 300px;
+}
+
+.number {
+  font-size: 25px;
+}
+
+.sign_out {
+  margin-left: 130px;
+}
+
+.technology-liking {
+  margin-left: 70%;
+}
+
+.technology-liking2 {
+  margin-left: 70%;
+}

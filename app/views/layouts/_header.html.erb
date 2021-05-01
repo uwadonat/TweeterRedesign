@@ -1,0 +1,133 @@
+<div class="container_fluid head d-flex row">
+      <div class="col-lg-3 col-2 logo1  text-white">
+         <div class="row">
+           <div class="text-left col-lg-3">
+          
+ 
+            
+            <%= image_tag current_user.profile_photo_url, width: '80px', class:' top-image' %><br>
+        
+            
+           </div>
+           <div class="col-lg-9">
+             
+             <h3 class="text-left foll1 current_profile link_color"><%= current_user.fullname %></h3> 
+              
+           </div>
+         </div>
+         <div class="row">
+          <div class="col-lg-6">
+            <h3 class="text-center"><%=  followers(current_user) %></h3>
+          <p class="text-left  foll current_profile link_color">Following</p>
+         </div>
+         <div class="col-lg-6">
+          <h3 class="text-center"><%=  followed(current_user) %></h3>
+          <p class="text-left foll current_profile link_color">Followers </p>
+         </div>
+         </div>
+      </div>
+      <div class="col-lg-6  col-10 main_logo">
+        <nav class="navbar navbar-expand-lg navbar-dark main_logo">
+     
+            <a class="navbar-brand logo " href="/">NewTech</a>
+            
+         
+        </nav>
+      </div>
+      <div class=" col-lg-3  d-none d-lg-block   main_logo">
+        
+        <form  action="/" class="search">
+          <input type="text" placeholder="Search.." name="search"><br><br><br>
+          <%= link_to 'sign_out', destroy_user_session_path, class: 'btn btn-primary sign_out', method: :delete %>
+   
+        </form>
+      
+      </div>
+     
+  </div>
+
+  <div class="main d-flex row">
+     <div class="col-lg-3  col-2 navb">
+      
+      <div class="row">
+        <div class=" col-12">
+          
+          <a class="nav-link link_color  link_size " href="/technologies"><i class="fas fa-home"></i> <span class="d-none d-md-inline">  Home</span>  </a>
+              </li>
+        </div>
+        <div class="col-12">
+          <a class="nav-link link_color link_size" href="/users"><i class="fas fa-user-alt"></i> <span class="d-none d-md-inline">  Profile</span> </a>
+        </div>
+        <div class="col-12">
+          <a class="nav-link link_color link_size" href="/pages/info"><i class="far fa-address-card"></i><span class="d-none d-md-inline">  About us</span></a>
+        </div>
+
+      </div>
+     </div>
+     <div class="col-lg-9 col-10 bg-danger color-bg">
+       <div class="main1 row">
+        <div class="col-lg-8 color-bg">
+          <%= yield %>
+        </div>
+        <div class=" col-lg-4 color-bg">
+          <div class="row">
+        <div class="row col-12 color-bg pro">
+      
+            <div class="row col-12">
+              <div class="col-10">
+              <%= image_tag @user.profile_photo_url, width: '100%', class:' profile-image' %> 
+
+            </div>
+            <div class="col-2"><%= followingss(@user) %></div>
+          </div>
+            <div class="col-12 color-bg">
+              <div class="row color-bg">
+              <div class="col-4 text-center current_profile link_color">
+                <%= tweets(@user)%> tweets 
+              </div>
+              <div class="col-4 text-center current_profile link_color">
+                 <%= followed(@user) %> followers
+              </div>
+              <div class="col-4 text-center current_profile link_color">
+                <%= followers(@user)%> following 
+              </div>
+              </div>
+            </div>
+
+         
+        </div>
+        <div class="col-12 color-bg">
+        <h2 class="text-center followe_title">who to follow</h2> 
+         
+         <% User.all.each  do |user| %>
+    
+            <div class="container row ">
+             
+              <div class="col-2">
+                <%= followerss_image(user) %>
+              </div>
+              <div class="row col-8">
+                <div class="col-12 followe_name">
+                  <%= followerss_name(user) %> 
+                </div>
+                <div class="col-12 followe_email">
+                  <%= followerss_email(user) %> 
+                </div>
+              </div>
+         
+              <div class="foll col-2">
+                <%= followerss_link(user) %>
+              </div>
+             
+          </div>
+          <br>
+           
+            <% end %>
+          </ul>
+        </div>
+        </div>
+      </div>
+       </div>
+       
+     </div>
+     
